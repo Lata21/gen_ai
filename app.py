@@ -8,7 +8,7 @@ import google.generativeai as genai
 
 genai.configure(api_key=os.getenv("google_api_key"))
 
-## Function to load OpenAI
+## Function to load OpenAIr
 model=genai.GenerativeModel("gemini-pro")
 def get_gemini_response(question):
     response = model.generate_content(question)
@@ -19,10 +19,7 @@ def get_gemini_response(question):
 st.set_page_config(page_title="Question and Answer Demo")
 
 st.header("Gemini Application")
-
 input=st.text_input("Input: ",key="input")
-
-
 submit=st.button("Ask the question")
 
 
